@@ -1,11 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page d'accueil</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Gourmetech</h1>
+        <nav>
+            <div id="open">
+                <ul>
+                    <li> <a href="accueil"></a> Accueil</li>
+                    <li> <a href="#"></a> Ajouter une recette</li>
+                    <li><a href="#"></a> Mes favoris</li>
+                    <li><a href="#"></a> A propos</li>
+                </ul>
+
+            </div>
+            <div id="burger">
+                <img src="../images/menu.png" alt="bouton menu">
+            </div>
+
+            <button id="theme"> </button>
+        </nav>
+    </header>
+    <main>
+        <form action="recherche">
+            <!-- Barre de recherche -->
+            <input type="text" name="recherche" placeholder="Rechercher une recette">
+
+            <!-- Filtre par catégorie -->
+            <select name="catégorie">
+                <option value="Entrée">Entrée</option>
+                <option value="Plat">Plat</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+
+            <select name="temps de préparation">
+                <option value="rapide">Rapide (<30min) </option>
+                <option value="moyen">Moyen (30-60 min) </option>
+                <option value="long">Long (>60 min) </option>
+            </select>
+
+            <select name="Difficulté">
+                <option value="Facile">Facile</option>
+                <option value="Moyen">Moyen</option>
+                <option value="Difficle">Difficle</option>
+            </select>
+            <!-- Bouton de recherche -->
+            <button type="submit">Rechercher</button>
+        </form>
+
+        <section class="hero">
+            <figure>
+                <img src="assest/images/Tarte aux pommes (1).jpg" alt="tarte aux pommes" width="100%">
+                <figcaption>
+                    <h2>Tarte aux pommes</h2>
+                    <p>Dessert</p>
+                    <p>60 min</p>
+                    <p>Facile</p>
+                    <button type="button">Voir la recette</button>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="assest/images/Ratatouille provençale.jpg" alt="Ratatouille provençale" width="100%">
+                <figcaption>
+                    <h2>Ratatouille provençale</h2>
+                    <p>Plat</p>
+                    <p>45 min</p>
+                    <p>Moyen</p>
+                    <button type="button">Voir la recette</button>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="assest/images/velouté au potiron.jpg" alt="Velouté de potiron" width="100%">
+                <figcaption>
+                    <h2>Velouté de potiron</h2>
+                    <p>Entrée</p>
+                    <p>30 min</p>
+                    <p>Facile</p>
+                    <button type="button">Voir la recette</button>
+                </figcaption>
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Des liens vers les différentes sections du site
+        Un lien vers la page "À propos"
+        Des informations de copyright -->
+<nav>
+    <h3>Navigation</h3>
+    <ul>
+        <li> <a href="accueil"></a> Accueil</li>
+        <li> <a href="#"></a> Ajouter une recette</li>
+        <li><a href="#"></a> Mes favoris</li>
+        <li><a href="#"></a> A propos</li>
+    </ul>
+</nav>
+
+<div>
+    <h3>A propos de GroumeTech</h3>
+    <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet pédagogique</p>
+</div>
+
+<p> © 2025 Groumtech - Tous droit résevés</p>
+    </footer>
 </body>
+
 </html>
