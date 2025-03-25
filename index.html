@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 
     <title>Page d'accueil</title>
@@ -15,9 +15,9 @@
 <body>
     <header>
         <div id="titre">
-        <p><strong>G</strong></p>
-        <h1>Gourmetech</h1>
-    </div>
+            <p><strong>G</strong></p>
+            <h1>Gourmetech</h1>
+        </div>
         <nav>
             <div class="open">
                 <ul>
@@ -31,47 +31,80 @@
 
             <button id="theme" aria-label="Changer de thème">
                 <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
-               
+
             </button>
 
             <div id="burger">
-                <svg width="50" height="50" viewBox="0 0 50 50"
-						xmlns="http://www.w3.org/2000/svg">
-						<rect x="5" y="5" width="40" height="40" rx="8" ry="8" fill="white" />
-						<line x1="15" y1="18" x2="35" y2="18" stroke="black" stroke-width="3"
-							stroke-linecap="round" />
-						<line x1="15" y1="25" x2="35" y2="25" stroke="black" stroke-width="3"
-							stroke-linecap="round" />
-						<line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3"
-							stroke-linecap="round" />
+                <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="5" width="40" height="40" rx="8" ry="8" fill="white" />
+                    <line x1="15" y1="18" x2="35" y2="18" stroke="black" stroke-width="3" stroke-linecap="round" />
+                    <line x1="15" y1="25" x2="35" y2="25" stroke="black" stroke-width="3" stroke-linecap="round" />
+                    <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
 
-          
+
         </nav>
     </header>
     <main>
         <form action="recherche">
             <!-- Barre de recherche -->
             <input type="text" name="recherche" placeholder="Rechercher une recette">
+            <div>
+                <!-- Filtre par catégorie -->
 
-            <!-- Filtre par catégorie -->
-            <select name="catégorie">
-                <option value="Entrée">Entrée</option>
-                <option value="Plat">Plat</option>
-                <option value="Dessert">Dessert</option>
-            </select>
+                <p>Catégorie</p>
 
-            <select name="temps de préparation">
-                <option value="rapide">Rapide (<30min) </option>
-                <option value="moyen">Moyen (30-60 min) </option>
-                <option value="long">Long (>60 min) </option>
-            </select>
+                <label>
+                    <input type="checkbox" name="catégorie" value="Entrée">
+                    Entrée
+                </label>
 
-            <select name="Difficulté">
-                <option value="Facile">Facile</option>
-                <option value="Moyen">Moyen</option>
-                <option value="Difficle">Difficle</option>
-            </select>
+                <label>
+                    <input type="checkbox" name="catégorie" value="Plat">
+                    Plat
+                </label>
+
+                <label>
+                    <input type="checkbox" name="catégorie" value="Dessert">
+                    Dessert
+                </label>
+            </div>
+
+            <div>
+                <p>Temps de préparation :</p>
+                <label>
+                    <input type="checkbox" name="temps de préparation" value="rapide">
+                    Rapide (<30min) </label>
+
+                        <label>
+                            <input type="checkbox" name="temps de préparation" value="moyen">
+                            Moyen (30-60 min)
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="temps de préparation" value="long">
+                            Long (>60 min)
+                        </label>
+            </div>
+
+            <div>
+                <p>Difficulté :</p>
+                <label>
+                    <input type="checkbox" name="Difficulté" value="Facile">
+                    Facile
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="Difficulté" value="Moyen">
+                    Moyen
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="Difficulté" value="Difficle">
+                    Difficle
+                </label>
+
+            </div>
             <!-- Bouton de recherche -->
             <button type="submit">Rechercher</button>
         </form>
@@ -118,22 +151,23 @@
         <!-- Des liens vers les différentes sections du site
         Un lien vers la page "À propos"
         Des informations de copyright -->
-<nav>
-    <h3>Navigation</h3>
-    <ul>
-        <li> <a href="index.html">Accueil</a> </li>
-        <li> <a href="recette.html">Recette</a> </li>
-        <li><a href="favoris.html">Mes favoris</a> </li>
-        <li><a href="a-propos.html">À propos</a> </li>
-    </ul>
-</nav>
+        <nav>
+            <h3>Navigation</h3>
+            <ul>
+                <li> <a href="index.html">Accueil</a> </li>
+                <li> <a href="recette.html">Recette</a> </li>
+                <li><a href="favoris.html">Mes favoris</a> </li>
+                <li><a href="a-propos.html">À propos</a> </li>
+            </ul>
+        </nav>
 
-<div>
-    <h3>A propos de GroumeTech</h3>
-    <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet pédagogique</p>
-</div>
+        <div>
+            <h3>A propos de GroumeTech</h3>
+            <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
+                pédagogique</p>
+        </div>
 
-<p> © 2025 Groumtech - Tous droit résevés</p>
+        <p> © 2025 Groumtech - Tous droit résevés</p>
     </footer>
 </body>
 
