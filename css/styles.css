@@ -6,12 +6,8 @@
     --titre-color: #565659;
     font-size: 14px;
     font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    ;
+    
 }
-
-
-
-
 
 header {
     padding: 10px;
@@ -113,6 +109,8 @@ form {
         background-color: var(--primary-color);
         color: white;
         border: none;
+        cursor: pointer;
+        
     }
 }
 
@@ -161,7 +159,8 @@ figcaption {
     }
 
     div {
-        margin: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: flex;
         gap: 20px;
         color: white;
@@ -194,6 +193,12 @@ figcaption {
         border-radius: 0.375rem;
     }
 }
+
+
+
+
+
+
 
 
 footer {
@@ -311,4 +316,18 @@ footer {
     display: none;
 }
 
+.hero{
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:20px;
+    }
+
+    .hero figure img {
+        height: 300px;  
+        object-fit: cover; /* Garantit que l'image s'adapte bien à l'espace défini */
+        width: 100%; /* Garde la largeur à 100% pour le conteneur parent */
+    }
+    
+    
 }
+
