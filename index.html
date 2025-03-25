@@ -4,27 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/styles.css">
+
+
     <title>Page d'accueil</title>
 </head>
 
 <body>
     <header>
+        <div id="titre">
+        <p><strong>G</strong></p>
         <h1>Gourmetech</h1>
+    </div>
         <nav>
-            <div id="open">
+            <div class="open">
                 <ul>
-                    <li> <a href="accueil"></a> Accueil</li>
-                    <li> <a href="#"></a> Ajouter une recette</li>
-                    <li><a href="#"></a> Mes favoris</li>
-                    <li><a href="#"></a> A propos</li>
+                    <li> <a href="index.html">Accueil</a> </li>
+                    <li> <a href="recette.html">Recette</a> </li>
+                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="a-propos.html">À propos</a> </li>
                 </ul>
 
             </div>
+
+            <button id="theme" aria-label="Changer de thème">
+                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
+               
+            </button>
+
             <div id="burger">
-                <img src="../images/menu.png" alt="bouton menu">
+                <svg width="50" height="50" viewBox="0 0 50 50"
+						xmlns="http://www.w3.org/2000/svg">
+						<rect x="5" y="5" width="40" height="40" rx="8" ry="8" fill="white" />
+						<line x1="15" y1="18" x2="35" y2="18" stroke="black" stroke-width="3"
+							stroke-linecap="round" />
+						<line x1="15" y1="25" x2="35" y2="25" stroke="black" stroke-width="3"
+							stroke-linecap="round" />
+						<line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3"
+							stroke-linecap="round" />
             </div>
 
-            <button id="theme"> </button>
+          
         </nav>
     </header>
     <main>
@@ -56,18 +78,18 @@
 
         <section class="hero">
             <figure>
-                <img src="assest/images/Tarte aux pommes (1).jpg" alt="tarte aux pommes" width="100%">
+                <img src="assets/images/Tarte aux pommes (1).jpg" alt="tarte aux pommes" width="100%">
                 <figcaption>
                     <h2>Tarte aux pommes</h2>
                     <p>Dessert</p>
                     <p>60 min</p>
                     <p>Facile</p>
-                    <button type="button">Voir la recette</button>
+                    <button type="button"> Voir la recette</button>
                 </figcaption>
             </figure>
 
             <figure>
-                <img src="assest/images/Ratatouille provençale.jpg" alt="Ratatouille provençale" width="100%">
+                <img src="assets/images/Ratatouille provençale.jpg" alt="Ratatouille provençale" width="100%">
                 <figcaption>
                     <h2>Ratatouille provençale</h2>
                     <p>Plat</p>
@@ -78,7 +100,7 @@
             </figure>
 
             <figure>
-                <img src="assest/images/velouté au potiron.jpg" alt="Velouté de potiron" width="100%">
+                <img src="assets/images/velouté au potiron.jpg" alt="Velouté de potiron" width="100%">
                 <figcaption>
                     <h2>Velouté de potiron</h2>
                     <p>Entrée</p>
@@ -99,10 +121,10 @@
 <nav>
     <h3>Navigation</h3>
     <ul>
-        <li> <a href="accueil"></a> Accueil</li>
-        <li> <a href="#"></a> Ajouter une recette</li>
-        <li><a href="#"></a> Mes favoris</li>
-        <li><a href="#"></a> A propos</li>
+        <li> <a href="index.html">Accueil</a> </li>
+        <li> <a href="recette.html">Recette</a> </li>
+        <li><a href="favoris.html">Mes favoris</a> </li>
+        <li><a href="a-propos.html">À propos</a> </li>
     </ul>
 </nav>
 

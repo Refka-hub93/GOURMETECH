@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #e67f22;
+    --second-color: #47d088;
+    --third-color: #3599d8;
+    --text-color: #7e7b7c;
+    font-size: 14px;
+    font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    ;
+}
+
+body {
+    padding: 10px;
+}
+
+
+header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+#titre {
+    display: flex;
+    gap: 10px;
+
+    p {
+        background-color: var(--primary-color);
+        /* Couleur de fond */
+        color: white;
+        /* Couleur du texte */
+        border-radius: 50%;
+        /* Forme circulaire */
+        width: 30px;
+        /* Largeur du logo */
+        height: 30px;
+        /* Hauteur identique pour un cercle */
+        display: flex;
+        /* Activer Flexbox */
+        justify-content: center;
+        /* Centrer horizontalement */
+        align-items: center;
+        /* Centrer verticalement */
+        font-size: 1.2rem;
+        /* Taille du texte */
+        text-align: center;
+        /* Au cas où pour le texte */
+
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.open {
+    display: none;
+}
+
+#theme {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+}
+
+#theme img {
+    width: 15px;
+    height: 15px;
+}
