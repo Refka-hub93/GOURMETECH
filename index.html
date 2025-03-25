@@ -29,10 +29,9 @@
 
             </div>
 
-            <button id="theme" aria-label="Changer de thème">
-                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
+            
 
-            </button>
+        
 
             <div id="burger">
                 <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -42,14 +41,20 @@
                     <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
 
-
+            <button id="theme" aria-label="Changer de thème">
+                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
         </nav>
     </header>
     <main>
         <form action="recherche">
             <!-- Barre de recherche -->
-            <input type="text" name="recherche" placeholder="Rechercher une recette">
-            <div>
+             <div id="barre">
+            <input type="text" name="recherche" placeholder="Rechercher une recette...">
+              <!-- Bouton de recherche -->
+              <button type="submit">Rechercher</button>
+            </div>
+            <div id="filtre">
+            <div id="categorie">
                 <!-- Filtre par catégorie -->
 
                 <p>Catégorie</p>
@@ -70,8 +75,8 @@
                 </label>
             </div>
 
-            <div>
-                <p>Temps de préparation :</p>
+            <div id="temps">
+                <p>Temps </p>
                 <label>
                     <input type="checkbox" name="temps de préparation" value="rapide">
                     Rapide (<30min) </label>
@@ -87,26 +92,25 @@
                         </label>
             </div>
 
-            <div>
-                <p>Difficulté :</p>
+            <div id="difficulte">
+                <p>Difficulté </p>
                 <label>
                     <input type="checkbox" name="Difficulté" value="Facile">
                     Facile
                 </label>
-                <br>
+                
                 <label>
                     <input type="checkbox" name="Difficulté" value="Moyen">
                     Moyen
                 </label>
-                <br>
+                
                 <label>
                     <input type="checkbox" name="Difficulté" value="Difficle">
                     Difficle
                 </label>
 
             </div>
-            <!-- Bouton de recherche -->
-            <button type="submit">Rechercher</button>
+        </div>
         </form>
 
         <section class="hero">
@@ -114,9 +118,11 @@
                 <img src="assets/images/Tarte aux pommes (1).jpg" alt="tarte aux pommes" width="100%">
                 <figcaption>
                     <h2>Tarte aux pommes</h2>
-                    <p>Dessert</p>
-                    <p>60 min</p>
-                    <p>Facile</p>
+                    <div>
+                        <p class="type">Dessert</p>
+                        <p class="duree">60 min</p>
+                        <p class="difficulte">Facile</p>
+                      </div>
                     <button type="button"> Voir la recette</button>
                 </figcaption>
             </figure>
@@ -125,9 +131,12 @@
                 <img src="assets/images/Ratatouille provençale.jpg" alt="Ratatouille provençale" width="100%">
                 <figcaption>
                     <h2>Ratatouille provençale</h2>
-                    <p>Plat</p>
-                    <p>45 min</p>
-                    <p>Moyen</p>
+                    <div>
+                        <p class="type">Plat</p>
+                        <p class="duree">45 min</p>
+                        <p class="difficulte">Moyen</p>
+                      </div>
+                      
                     <button type="button">Voir la recette</button>
                 </figcaption>
             </figure>
@@ -136,9 +145,12 @@
                 <img src="assets/images/velouté au potiron.jpg" alt="Velouté de potiron" width="100%">
                 <figcaption>
                     <h2>Velouté de potiron</h2>
-                    <p>Entrée</p>
-                    <p>30 min</p>
-                    <p>Facile</p>
+                    <div>
+                        <p class="type">Entrée</p>
+                        <p class="duree">30 min</p>
+                        <p class="difficulte">Facile</p>
+                      </div>
+                      
                     <button type="button">Voir la recette</button>
                 </figcaption>
             </figure>
@@ -148,9 +160,7 @@
     </main>
 
     <footer>
-        <!-- Des liens vers les différentes sections du site
-        Un lien vers la page "À propos"
-        Des informations de copyright -->
+       <div class="final">
         <nav>
             <h3>Navigation</h3>
             <ul>
@@ -166,8 +176,8 @@
             <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
                 pédagogique</p>
         </div>
-
-        <p> © 2025 Groumtech - Tous droit résevés</p>
+    </div>
+        <p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
     </footer>
 </body>
 
