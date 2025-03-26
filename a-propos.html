@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/a-propos.css">
     <title>À propos</title>
 </head>
 <body>
+
     <header>
-        <h1>Gourmetech</h1>
+        <div id="titre">
+            <p><strong>G</strong></p>
+            <h1>Gourmetech</h1>
+        </div>
         <nav>
-            <div id="open">
+            <div class="open">
                 <ul>
                     <li> <a href="index.html">Accueil</a> </li>
                     <li> <a href="recette.html">Recette</a> </li>
@@ -18,17 +23,23 @@
                 </ul>
 
             </div>
+
             <div id="burger">
-                <img src="assets/icons/menu.png" alt="bouton menu">
+                <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="5" width="40" height="40" rx="8" ry="8" fill="white" />
+                    <line x1="15" y1="18" x2="35" y2="18" stroke="black" stroke-width="3" stroke-linecap="round" />
+                    <line x1="15" y1="25" x2="35" y2="25" stroke="black" stroke-width="3" stroke-linecap="round" />
+                    <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
 
-            <button id="theme"> </button>
+            <button class="theme" aria-label="Changer de thème">
+                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
         </nav>
     </header>
     <main>
 
 
-        <section>
+        <section class="presentation">
             <h2>À propos de Gourmetech</h2>
             <p>Bienvenue sur Gourmetech, votre plateforme incontournable pour découvrir, partager et explorer des recettes de cuisine délicieuses et variées. Que vous soyez un chef expérimenté ou un amateur en quête d'inspiration, notre site est conçu pour vous offrir des idées culinaires adaptées à tous les goûts et niveaux de compétence.</p>
             <p>Avec Gourmetech, vous pouvez :</p>
@@ -61,10 +72,11 @@
     <label for="message">Message :</label>
     <textarea name="message" id="message" placeholder="Entrez votre message" required aria-label="Entrez votre message" required></textarea>
     
-</div>
+</div >
+<div id="checkbox">
 <input type="checkbox" name="rgpd" id="rgpd"  aria-label="J'accepte la collecte de mes données" required >
 <label for="rgpd" >J'accepte la collecte de mes données</label>
-
+</div>
 <button type="submit">Envoyer</button>
 </form>
 </section>
@@ -112,7 +124,7 @@
     <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet pédagogique</p>
 </div>
 
-<p> © 2025 Groumtech - Tous droit résevés</p>
+<p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
     </footer>
 </body>
 </html>

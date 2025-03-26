@@ -17,6 +17,19 @@
 
 
 
+/* Mode nuit */
+.nuit {
+    background-color: #121212;
+    color: white;
+}
+
+/* Modifier le style des liens en mode nuit */
+body.nuit a {
+    color: #ffffff;
+}
+
+
+
 header {
     padding: 10px;
     display: flex;
@@ -73,18 +86,19 @@ nav {
     display: none;
 }
 
-#theme {
+.theme {
     width: 25px;
     height: 25px;
     border: none;
     border-radius: 50%;
 }
 
-#theme img {
+.theme img {
     width: 15px;
     height: 15px;
 }
 
+/* fin header */
 
 .hero {
     margin: 10px;
@@ -171,7 +185,6 @@ figcaption {
     h1 {
         padding-top: 10px;
     }
-
 }
 
 .steps {
@@ -266,10 +279,8 @@ footer {
 
 
     header {
-
         justify-content: space-between;
         padding-inline: 20px;
-
     }
 
     .open {

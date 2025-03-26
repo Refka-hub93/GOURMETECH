@@ -1,0 +1,288 @@
+:root {
+    --primary-color: #e67f22;
+    --second-color: #47d088;
+    --third-color: #3599d8;
+    --text-color: #7e7b7c;
+    --titre-color: #565659;
+    font-size: 14px;
+    font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* Mode nuit */
+.nuit {
+    background-color: #121212;
+    color: white;
+}
+
+/* Modifier le style des liens en mode nuit */
+body.nuit a {
+    color: #ffffff;
+}
+
+
+
+header {
+    padding: 10px;
+    display: flex;
+
+    justify-content: center;
+    gap: 50px;
+    box-shadow: 1px 1px 1px 1px rgb(239, 235, 235);
+
+}
+
+#titre {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    p {
+        background-color: var(--primary-color);
+        /* Couleur de fond */
+        color: white;
+        /* Couleur du texte */
+        border-radius: 50%;
+        /* Forme circulaire */
+        width: 40px;
+        /* Largeur du logo */
+        height: 40px;
+        /* Hauteur identique pour un cercle */
+        display: flex;
+        /* Activer Flexbox */
+        justify-content: center;
+        /* Centrer horizontalement */
+        align-items: center;
+        /* Centrer verticalement */
+        font-size: 1.2rem;
+        /* Taille du texte */
+        text-align: center;
+        /* Au cas où pour le texte */
+
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+        color: var(--primary-color);
+    }
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.open {
+    display: none;
+}
+
+.theme {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+}
+
+.theme img {
+    width: 15px;
+    height: 15px;
+}
+
+/* fin header */
+
+.presentation {
+   
+padding: 10px;
+
+    h2 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+    
+    }
+    ul {
+    
+        padding-left: 20px;
+    
+        /* Ajout d'une marge pour afficher les puces */
+        li {
+            margin: 20px;
+        }
+}}
+
+section{
+    padding: 10px;
+    h2 {
+   
+        font-size: 1.2rem;
+    }
+    form {  
+     
+        padding : 10px;
+        display: inline-block;
+        }
+    
+        div {margin-bottom: 10px ;}
+    
+        
+   /* Sélectionne tous les inputs sauf ceux de type checkbox */
+input:not([type="checkbox"]), 
+textarea { 
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+
+ 
+#checkbox {
+    display: inline-block; /* Aligne les éléments sur une seule ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 10px; /* Ajoute un espace entre les éléments */
+} 
+
+   button {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding-inline: 20px;
+    padding-block: 10px;
+    margin: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+   } 
+}
+    
+summary {
+    font-size: 1rem;
+}
+
+details {
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+/*  
+Footer */
+footer {
+    padding: 15px;
+    line-height: 20px;
+
+
+    nav {
+        display: inline;
+        padding: 10px;
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+    }
+
+    h3 {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    #copy {
+        margin: 10px;
+        text-align: center;
+        color: var(--text-color);
+
+    }
+}
+
+
+
+/* Media Query spécifique pour tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    form {
+        display: block;
+        margin: 0 auto; /* Centrer horizontalement */
+        width: 80%; /* Ajuste la largeur du formulaire si nécessaire */
+        
+    }
+
+
+    button {
+        display: block; /* Rend le bouton un élément de bloc */
+        margin: 0 auto; /* Centre horizontalement */
+    }
+
+
+    footer {
+        .final {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+
+
+    header {
+        justify-content: space-between;
+        padding-inline: 20px;
+    }
+
+    .open {
+        display: block;
+        padding-right: 50px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #burger {
+        display: none;
+    }
+
+    form {
+        display: block;
+        margin: 0 auto; /* Centrer horizontalement */
+        width: 50%; /* Ajuste la largeur du formulaire selon tes préférences */
+        max-width: 600px; /* Limite la largeur pour ne pas avoir un formulaire trop large */
+    }
+
+    
+    button {
+        display: block; /* Rend le bouton un élément de bloc */
+        margin: 0 auto; /* Centre horizontalement */
+    }
+
+}
