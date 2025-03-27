@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/theme.js" defer></script>
+    <script src="js/burger.js" defer  ></script>
+    <script src="js/favoris.js" defer></script>
+
 <link rel="stylesheet" href="css/favoris.css">
     <title>Favoris</title>
 </head>
@@ -17,9 +21,10 @@
                 <ul>
                     <li> <a href="index.html">Accueil</a> </li>
                     <li> <a href="recette.html">Recette</a> </li>
-                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="favoris.html">Favoris</a> </li>
                     <li><a href="a-propos.html">À propos</a> </li>
                 </ul>
+                <button id="close">X</button>
 
             </div>
 
@@ -31,41 +36,50 @@
                     <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
 
-            <button class="theme" aria-label="Changer de thème">
-                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
+            <div class="btn">
+                <button class="theme dark-theme" aria-label="Changer de thème">
+                    <img id="theme-icon" src="assets/icons/croissant.png" alt="theme">
+            </div>
         </nav>
     </header>
+ 
+
+
     <main>
-
-
-
-
-
+        <h2>Mes Recettes Favorites</h2>
+        <section id="favoris-list">
+            <!-- Les recettes favorites seront affichées ici -->
+        </section>
 
     </main>
+    
+
+
+    
 
 
 
 
     <footer>
-       
-<nav>
-    <h3>Navigation</h3>
-    <ul>
-        <li> <a href="index.html">Accueil</a> </li>
-        <li> <a href="recette.html">Recette</a> </li>
-        <li><a href="favoris.html">Mes favoris</a> </li>
-        <li><a href="a-propos.html">À propos</a> </li>
-    </ul>
-</nav>
-
-<div>
-    <h3>A propos de GroumeTech</h3>
-    <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet pédagogique</p>
-</div>
-
-<p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
-    </footer>
+        <div class="final">
+         <nav>
+             <h3>Navigation</h3>
+             <ul>
+                 <li> <a href="index.html">Accueil</a> </li>
+                 <li> <a href="recette.html">Recette</a> </li>
+                 <li><a href="favoris.html">Mes favoris</a> </li>
+                 <li><a href="a-propos.html">À propos</a> </li>
+             </ul>
+         </nav>
+ 
+         <div>
+             <h3>A propos de GroumeTech</h3>
+             <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
+                 pédagogique</p>
+         </div>
+     </div>
+         <p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
+     </footer>
 </body>
 </html>
     

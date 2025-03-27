@@ -17,17 +17,48 @@
 
 
 
-/* Mode nuit */
-.nuit {
-    background-color: #121212;
+/* mode nuit */
+body {
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: black;
     color: white;
+   
+    
 }
 
-/* Modifier le style des liens en mode nuit */
-body.nuit a {
-    color: #ffffff;
+a {
+    color: black;
+    text-decoration: none;
 }
 
+/* Couleur des liens dans le mode sombre */
+body.dark-theme a {
+    color: white !important;
+}
+
+.btn {padding-right: 30px;
+position: sticky;}
+
+.theme {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+}
+
+.theme img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Mode nuit */
+
+ 
 
 
 header {
@@ -82,23 +113,136 @@ nav {
     align-items: center;
 }
 
+/* Interactivité burger */
 .open {
+
     display: none;
+    z-index: 100;
+    ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 20%;
+        background-color: rgba(0, 0, 0, 0.678);
+
+        
+        li {
+            margin: 2rem;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    
 }
 
-.theme {
-    width: 25px;
-    height: 25px;
+
+}
+.open #close {
+    position: sticky;
     border: none;
+    color: #e67f22;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff; /* Optionnel : couleur de fond pour la visibilité */
     border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 101;  
+    transform: translateX(-40px); /* Décale le bouton de 40px vers la gauche */
 }
 
-.theme img {
-    width: 15px;
-    height: 15px;
+#burger {
+    cursor: pointer;
 }
+
+/* fin interactivité burger */
+
+ 
 
 /* fin header */
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+figcaption {
+    padding: 15px;
+}
+
+figcaption h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+figcaption div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    color: white;
+ 
+}
+
+figcaption .type {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 624.9375rem;
+}
+
+figcaption .duree {
+    background-color: var(--second-color);
+    padding: 10px;
+    border-radius: 624.9375rem;
+}
+
+figcaption .difficulte {
+    background-color: var(--third-color);
+    padding: 10px;
+    border-radius: 624.9375rem;
+}
+
+figcaption button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+figcaption button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.remove-favori {
+    
+    padding: 15px;
+    margin: 15px;
+    background-color: #f44336; /* Rouge */
+    color: white;
+    border: none;
+    text-align: center;
+   
+ 
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-favori:hover {
+    background-color: #d32f2f; /* Un rouge plus foncé au survol */
+}
+
 
 
 footer {
@@ -110,9 +254,14 @@ footer {
         display: inline;
         padding: 10px;
 
+       li{
+        list-style: none;
+       } 
+
         a {
             text-decoration: none;
             color: black;
+           
         }
 
     }
@@ -130,6 +279,7 @@ footer {
     }
 }
 
+
 /* Media Query spécifique pour tablette */
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -138,7 +288,16 @@ footer {
     }
 
 
-   
+    .btn {padding-right: 60px;
+    }
+  
+    .open #close {
+       
+      transform: translateX(-70px);
+      /* Décale le bouton de 40px vers la gauche */
+      
+  }
+    
 
 
     footer {
@@ -156,28 +315,50 @@ footer {
         justify-content: space-between;
         padding-inline: 20px;
     }
-
     .open {
         display: block;
         padding-right: 50px;
 
-        ul {
+        ul { position: static;
+
             display: flex;
             justify-content: space-between;
             gap: 30px;
             list-style: none;
+            background-color: white;
+            color: black;
 
-            a {
-                text-decoration: none;
-
-                color: black;
-                font-weight: bold;
-            }
         }
     }
 
+    
+        .open ul a {
+            color: black !important;
+            text-decoration: none;               
+                font-weight: bold;
+        }
     #burger {
         display: none;
     }
+    
+    
+    #close{
+        display: none;
+    }
 
-  
+
+
+
+    footer {
+   
+ 
+        .final {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+           
+         }
+         
+    
+    }    
+
+    }

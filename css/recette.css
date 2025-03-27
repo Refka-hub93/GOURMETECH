@@ -15,13 +15,36 @@
     margin: 0;
 }
 
+/* mode nuit */
+body {
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+}
 
+body.dark-theme {
+    background-color: black;
+    color: white;
+   
+    
+}
+
+.btn {padding-right: 30px;
+position: sticky;}
+
+.theme {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+}
+
+.theme img {
+    width: 15px;
+    height: 15px;
+}
 
 /* Mode nuit */
-.nuit {
-    background-color: #121212;
-    color: white;
-}
 
 /* Modifier le style des liens en mode nuit */
 body.nuit a {
@@ -82,21 +105,58 @@ nav {
     align-items: center;
 }
 
+
+/* Interactivité burger */
 .open {
+
     display: none;
+    z-index: 100;
+    ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 20%;
+        background-color: rgba(0, 0, 0, 0.678);
+
+        
+        li {
+            margin: 2rem;
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    
 }
 
-.theme {
-    width: 25px;
-    height: 25px;
+
+}
+.open #close {
+    position: sticky;
     border: none;
+    color: #e67f22;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff; /* Optionnel : couleur de fond pour la visibilité */
     border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 101;  
+    transform: translateX(-40px); /* Décale le bouton de 40px vers la gauche */
 }
 
-.theme img {
-    width: 15px;
-    height: 15px;
+#burger {
+    cursor: pointer;
 }
+
+/* fin interactivité burger */
+
+
+ 
 
 /* fin header */
 
@@ -265,7 +325,15 @@ footer {
         gap: 20px;
     }
 
+    .btn {padding-right: 60px;
+    }
 
+    .open #close {
+       
+      transform: translateX(-70px);
+      /* Décale le bouton de 40px vers la gauche */
+  }
+    
 
     footer {
         .final {
@@ -287,24 +355,33 @@ footer {
         display: block;
         padding-right: 50px;
 
-        ul {
+        ul { position: static;
+
             display: flex;
             justify-content: space-between;
             gap: 30px;
             list-style: none;
+            background-color: white;
+            color: black;
 
-            a {
-                text-decoration: none;
-
-                color: black;
-                font-weight: bold;
-            }
         }
     }
 
+    
+        .open ul a {
+            color: black !important;
+            text-decoration: none;               
+                font-weight: bold;
+        }
     #burger {
         display: none;
     }
+    
+    
+    #close{
+        display: none;
+    }
+
 
     .recepie img {
         max-width: 100%;
@@ -346,4 +423,17 @@ border-radius: 2px;
 
 
     }
+
+    
+    footer {
+   
+ 
+        .final {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+           
+         }
+         
+    
+    }    
 }

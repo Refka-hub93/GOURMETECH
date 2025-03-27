@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/theme.js" defer></script>
+    <script src="js/burger.js" defer></script>
+
     <link rel="stylesheet" href="css/a-propos.css">
     <title>À propos</title>
 </head>
+
 <body>
 
     <header>
@@ -18,9 +23,10 @@
                 <ul>
                     <li> <a href="index.html">Accueil</a> </li>
                     <li> <a href="recette.html">Recette</a> </li>
-                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="favoris.html">Favoris</a> </li>
                     <li><a href="a-propos.html">À propos</a> </li>
                 </ul>
+                <button id="close">X</button>
 
             </div>
 
@@ -32,8 +38,10 @@
                     <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
 
-            <button class="theme" aria-label="Changer de thème">
-                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
+            <div class="btn">
+                <button class="theme dark-theme" aria-label="Changer de thème">
+                    <img id="theme-icon" src="assets/icons/croissant.png" alt="theme">
+            </div>
         </nav>
     </header>
     <main>
@@ -41,90 +49,108 @@
 
         <section class="presentation">
             <h2>À propos de Gourmetech</h2>
-            <p>Bienvenue sur Gourmetech, votre plateforme incontournable pour découvrir, partager et explorer des recettes de cuisine délicieuses et variées. Que vous soyez un chef expérimenté ou un amateur en quête d'inspiration, notre site est conçu pour vous offrir des idées culinaires adaptées à tous les goûts et niveaux de compétence.</p>
+            <p>Bienvenue sur Gourmetech, votre plateforme incontournable pour découvrir, partager et explorer des
+                recettes de cuisine délicieuses et variées. Que vous soyez un chef expérimenté ou un amateur en quête
+                d'inspiration, notre site est conçu pour vous offrir des idées culinaires adaptées à tous les goûts et
+                niveaux de compétence.</p>
             <p>Avec Gourmetech, vous pouvez :</p>
             <ul>
                 <li>Ajouter vos propres recettes et les partager avec une communauté passionnée.</li>
                 <li>Enregistrer vos recettes favorites pour les retrouver facilement.</li>
-                <li>Utiliser notre barre de recherche avec filtres pour trouver des recettes par catégorie, temps de préparation ou niveau de difficulté.</li>
+                <li>Utiliser notre barre de recherche avec filtres pour trouver des recettes par catégorie, temps de
+                    préparation ou niveau de difficulté.</li>
             </ul>
-            <p>Notre mission est de rendre la cuisine accessible, amusante et créative pour tout le monde. Rejoignez-nous et laissez-vous inspirer !</p>
+            <p>Notre mission est de rendre la cuisine accessible, amusante et créative pour tout le monde.
+                Rejoignez-nous et laissez-vous inspirer !</p>
         </section>
 
-<section>
-    <h2>Formulaire de contact</h2>
-<form action="Contact">
-<div>
-    <label for="name" >Nom :</label>
-    <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+        <section>
+            <h2>Formulaire de contact</h2>
+            <form action="Contact">
+                <div>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
 
-</div>
-<div>
-<label for="firstName">Prénom :</label>
-<input type="text" id="firstName" name="firstName" placeholder="Entrez votre prénom">
-</div>
+                </div>
+                <div>
+                    <label for="firstName">Prénom :</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Entrez votre prénom">
+                </div>
 
-<div>
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" placeholder="Entrez votre adresse E-mail" required aria-label="E-mail" required>
-</div>
-<div>
-    <label for="message">Message :</label>
-    <textarea name="message" id="message" placeholder="Entrez votre message" required aria-label="Entrez votre message" required></textarea>
-    
-</div >
-<div id="checkbox">
-<input type="checkbox" name="rgpd" id="rgpd"  aria-label="J'accepte la collecte de mes données" required >
-<label for="rgpd" >J'accepte la collecte de mes données</label>
-</div>
-<button type="submit">Envoyer</button>
-</form>
-</section>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre adresse E-mail" required
+                        aria-label="E-mail" required>
+                </div>
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea name="message" id="message" placeholder="Entrez votre message" required
+                        aria-label="Entrez votre message" required></textarea>
 
-<section>
-    <h2>FAQ - Questions Fréquemment Posées</h2>
-    <details>
-        <summary>Comment ajouter une recette sur le site ?</summary>
-        <p>Pour ajouter une recette, cliquez sur "Ajouter une recette" dans le menu principal. Remplissez les champs requis, comme les ingrédients, les étapes, et téléchargez une image si nécessaire. Puis, cliquez sur "Publier".</p>
-    </details>
-    <details>
-        <summary>Puis-je enregistrer mes recettes préférées ?</summary>
-        <p>Oui, vous pouvez enregistrer vos recettes préférées en cliquant sur le bouton "Favoris" disponible sur chaque recette. Vous les retrouverez ensuite dans la section "Mes favoris".</p>
-    </details>
-    <details>
-        <summary>Comment fonctionne la barre de recherche avec filtres ?</summary>
-        <p>La barre de recherche vous permet de rechercher des recettes par nom ou par mots-clés. Les filtres permettent de trier les recettes selon la catégorie (Entrées, Plats, Desserts), le temps de préparation et le niveau de difficulté.</p>
-    </details>
-    <details>
-        <summary>Dois-je créer un compte pour accéder au site ?</summary>
-        <p>Non, vous pouvez parcourir les recettes sans créer de compte. Cependant, un compte est requis pour ajouter des recettes ou enregistrer vos favoris.</p>
-    </details>
-    <details>
-        <summary>Les recettes sont-elles vérifiées ?</summary>
-        <p>Nous vérifions les recettes ajoutées par nos utilisateurs afin de garantir leur qualité et leur précision avant publication.</p>
-    </details>
-</section>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" name="rgpd" id="rgpd" aria-label="J'accepte la collecte de mes données"
+                        required>
+                    <label for="rgpd">J'accepte la collecte de mes données</label>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>FAQ - Questions Fréquemment Posées</h2>
+            <details>
+                <summary>Comment ajouter une recette sur le site ?</summary>
+                <p>Pour ajouter une recette, cliquez sur "Ajouter une recette" dans le menu principal. Remplissez les
+                    champs requis, comme les ingrédients, les étapes, et téléchargez une image si nécessaire. Puis,
+                    cliquez sur "Publier".</p>
+            </details>
+            <details>
+                <summary>Puis-je enregistrer mes recettes préférées ?</summary>
+                <p>Oui, vous pouvez enregistrer vos recettes préférées en cliquant sur le bouton "Favoris" disponible
+                    sur chaque recette. Vous les retrouverez ensuite dans la section "Mes favoris".</p>
+            </details>
+            <details>
+                <summary>Comment fonctionne la barre de recherche avec filtres ?</summary>
+                <p>La barre de recherche vous permet de rechercher des recettes par nom ou par mots-clés. Les filtres
+                    permettent de trier les recettes selon la catégorie (Entrées, Plats, Desserts), le temps de
+                    préparation et le niveau de difficulté.</p>
+            </details>
+            <details>
+                <summary>Dois-je créer un compte pour accéder au site ?</summary>
+                <p>Non, vous pouvez parcourir les recettes sans créer de compte. Cependant, un compte est requis pour
+                    ajouter des recettes ou enregistrer vos favoris.</p>
+            </details>
+            <details>
+                <summary>Les recettes sont-elles vérifiées ?</summary>
+                <p>Nous vérifions les recettes ajoutées par nos utilisateurs afin de garantir leur qualité et leur
+                    précision avant publication.</p>
+            </details>
+        </section>
 
     </main>
 
+
     <footer>
-       
-<nav>
-    <h3>Navigation</h3>
-    <ul>
-        <li> <a href="index.html">Accueil</a> </li>
-        <li> <a href="recette.html">Recette</a> </li>
-        <li><a href="favoris.html">Mes favoris</a> </li>
-        <li><a href="a-propos.html">À propos</a> </li>
-    </ul>
-</nav>
+        <div class="final">
+            <nav>
+                <h3>Navigation</h3>
+                <ul>
+                    <li> <a href="index.html">Accueil</a> </li>
+                    <li> <a href="recette.html">Recette</a> </li>
+                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="a-propos.html">À propos</a> </li>
+                </ul>
+            </nav>
 
-<div>
-    <h3>A propos de GroumeTech</h3>
-    <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet pédagogique</p>
-</div>
-
-<p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
+            <div>
+                <h3>A propos de GroumeTech</h3>
+                <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
+                    pédagogique</p>
+            </div>
+        </div>
+        <p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
     </footer>
 </body>
+
 </html>

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/theme.js" defer></script>
+    <script src="js/burger.js" defer  ></script>
 
     <link rel="stylesheet" href="css/recette.css">
     <title>Page de recette</title>
@@ -20,9 +22,10 @@
                 <ul>
                     <li> <a href="index.html">Accueil</a> </li>
                     <li> <a href="recette.html">Recette</a> </li>
-                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="favoris.html">Favoris</a> </li>
                     <li><a href="a-propos.html">À propos</a> </li>
                 </ul>
+                <button id="close">X</button>
 
             </div>
 
@@ -34,8 +37,10 @@
                     <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
 
-            <button class="theme" aria-label="Changer de thème">
-                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
+            <div class="btn">
+                <button class="theme dark-theme" aria-label="Changer de thème">
+                    <img id="theme-icon" src="assets/icons/croissant.png" alt="theme">
+            </div>
         </nav>
     </header>
     <main>

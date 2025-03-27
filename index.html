@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="js/theme.js" defer></script>
+    <script src="js/burger.js" defer></script>
+    <script src="js/filtre.js" defer></script>
+    <script src="js/styles.js" defer></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -23,15 +26,17 @@
                 <ul>
                     <li> <a href="index.html">Accueil</a> </li>
                     <li> <a href="recette.html">Recette</a> </li>
-                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="favoris.html">Favoris</a> </li>
                     <li><a href="a-propos.html">À propos</a> </li>
+
                 </ul>
+                <button id="close">X</button>
 
             </div>
 
-            
 
-        
+
+
 
             <div id="burger">
                 <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -40,148 +45,165 @@
                     <line x1="15" y1="25" x2="35" y2="25" stroke="black" stroke-width="3" stroke-linecap="round" />
                     <line x1="15" y1="32" x2="35" y2="32" stroke="black" stroke-width="3" stroke-linecap="round" />
             </div>
-
-            <button id="theme" aria-label="Changer de thème">
-                <img id="theme-icon" src="assets/icons/croissant.png" alt="Mode">
+            <div class="btn">
+                <button class="theme dark-theme" aria-label="Changer de thème">
+                    <img id="theme-icon" src="assets/icons/croissant.png" alt="theme">
+            </div>
         </nav>
     </header>
     <main>
         <form action="recherche">
             <!-- Barre de recherche -->
-             <div id="barre">
-            <input type="text" name="recherche" placeholder="Rechercher une recette...">
-              <!-- Bouton de recherche -->
-              <button type="submit">Rechercher</button>
+            <div id="barre">
+                <input type="text" name="recherche" placeholder="Rechercher une recette...">
+                <!-- Bouton de recherche -->
+                <button type="submit">Rechercher</button>
             </div>
             <div id="filtre">
-            <div id="categorie">
-                <!-- Filtre par catégorie -->
+                <div id="categorie">
+                    <!-- Filtre par catégorie -->
 
-                <p>Catégorie</p>
+                    <p>Catégorie</p>
 
-                <label>
-                    <input type="checkbox" name="catégorie" value="Entrée">
-                    Entrée
-                </label>
+                    <label>
+                        <input type="checkbox" name="catégorie" value="Entrée">
+                        Entrée
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="catégorie" value="Plat">
-                    Plat
-                </label>
+                    <label>
+                        <input type="checkbox" name="catégorie" value="Plat">
+                        Plat
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="catégorie" value="Dessert">
-                    Dessert
-                </label>
+                    <label>
+                        <input type="checkbox" name="catégorie" value="Dessert">
+                        Dessert
+                    </label>
+                </div>
+
+                <div id="temps">
+                    <p>Temps </p>
+                    <label>
+                        <input type="checkbox" name="temps de préparation" value="rapide">
+                        Rapide (<30min) </label>
+
+                            <label>
+                                <input type="checkbox" name="temps de préparation" value="moyen">
+                                Moyen (30-60 min)
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="temps de préparation" value="long">
+                                Long (>60 min)
+                            </label>
+                </div>
+
+                <div id="difficulte">
+                    <p>Difficulté </p>
+                    <label>
+                        <input type="checkbox" name="Difficulté" value="Facile">
+                        Facile
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="Difficulté" value="Moyen">
+                        Moyen
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="Difficulté" value="Difficle">
+                        Difficle
+                    </label>
+
+                </div>
             </div>
-
-            <div id="temps">
-                <p>Temps </p>
-                <label>
-                    <input type="checkbox" name="temps de préparation" value="rapide">
-                    Rapide (<30min) </label>
-
-                        <label>
-                            <input type="checkbox" name="temps de préparation" value="moyen">
-                            Moyen (30-60 min)
-                        </label>
-
-                        <label>
-                            <input type="checkbox" name="temps de préparation" value="long">
-                            Long (>60 min)
-                        </label>
-            </div>
-
-            <div id="difficulte">
-                <p>Difficulté </p>
-                <label>
-                    <input type="checkbox" name="Difficulté" value="Facile">
-                    Facile
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="Difficulté" value="Moyen">
-                    Moyen
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="Difficulté" value="Difficle">
-                    Difficle
-                </label>
-
-            </div>
-        </div>
         </form>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-          </svg>
+
         <section class="hero">
-           
-            <figure>
+
+            <figure class="recette" data-id="1" data-type="Dessert" data-duree="60" data-difficulte="Facile">
                 <img src="assets/images/Tarte aux pommes (1).jpg" alt="tarte aux pommes" width="100%">
-                
+                <svg class="favori-actif" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
                 <figcaption>
                     <h2>Tarte aux pommes</h2>
                     <div>
                         <p class="type">Dessert</p>
                         <p class="duree">60 min</p>
                         <p class="difficulte">Facile</p>
-                      </div>
-                    <button type="button"> Voir la recette</button>
+                    </div>
+                    <button type="button"> <a href="recette.html">Voir la recette</a> </button>
+
                 </figcaption>
             </figure>
 
-            <figure>
+            <figure class="recette"  data-id="2" data-type="Plat" data-duree="45" data-difficulte="Moyen">
                 <img src="assets/images/Ratatouille provençale.jpg" alt="Ratatouille provençale" width="100%">
+                <svg class="favori-actif" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
                 <figcaption>
                     <h2>Ratatouille provençale</h2>
                     <div>
                         <p class="type">Plat</p>
                         <p class="duree">45 min</p>
                         <p class="difficulte">Moyen</p>
-                      </div>
-                      
-                    <button type="button">Voir la recette</button>
+                    </div>
+
+                    <button type="button"> <a href="recette.html">Voir la recette</a> </button>
+
                 </figcaption>
             </figure>
 
-            <figure>
+            <figure class="recette" data-id="3" data-type="Entrée" data-duree="30" data-difficulte="Facile">
                 <img src="assets/images/velouté au potiron.jpg" alt="Velouté de potiron" width="100%">
+                <svg class="favori-actif" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
                 <figcaption>
                     <h2>Velouté de potiron</h2>
                     <div>
                         <p class="type">Entrée</p>
                         <p class="duree">30 min</p>
                         <p class="difficulte">Facile</p>
-                      </div>
-                      
-                    <button type="button">Voir la recette</button>
+                    </div>
+
+
+                    <button type="button"> <a href="recette.html">Voir la recette</a> </button>
+
                 </figcaption>
             </figure>
-       
+
         </section>
 
     </main>
 
     <footer>
-       <div class="final">
-        <nav>
-            <h3>Navigation</h3>
-            <ul>
-                <li> <a href="index.html">Accueil</a> </li>
-                <li> <a href="recette.html">Recette</a> </li>
-                <li><a href="favoris.html">Mes favoris</a> </li>
-                <li><a href="a-propos.html">À propos</a> </li>
-            </ul>
-        </nav>
+        <div class="final">
+            <nav>
+                <h3>Navigation</h3>
+                <ul>
+                    <li> <a href="index.html">Accueil</a> </li>
+                    <li> <a href="recette.html">Recette</a> </li>
+                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="a-propos.html">À propos</a> </li>
+                </ul>
+            </nav>
 
-        <div>
-            <h3>A propos de GroumeTech</h3>
-            <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
-                pédagogique</p>
+            <div>
+                <h3>A propos de GroumeTech</h3>
+                <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
+                    pédagogique</p>
+            </div>
         </div>
-    </div>
         <p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
     </footer>
 </body>
