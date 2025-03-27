@@ -1,38 +1,4 @@
 
-    // const filters = document.querySelectorAll('#filtre input[type="checkbox"]');
-    // const recipes = document.querySelectorAll('.recette');
-
-    // filters.forEach(filter => {
-    //     filter.addEventListener('change', applyFilters);
-    // });
-
-    // function applyFilters() {
-    //     const selectedCategories = Array.from(document.querySelectorAll('#categorie input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
-    //     const selectedTimes = Array.from(document.querySelectorAll('#temps input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
-    //     const selectedDifficulties = Array.from(document.querySelectorAll('#difficulte input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
-
-    //     recipes.forEach(recipe => {
-    //         const recipeCategory = recipe.getAttribute('data-type');
-    //         const recipeTime = recipe.getAttribute('data-duree');
-    //         const recipeDifficulty = recipe.getAttribute('data-difficulte');
-
-    //         const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(recipeCategory);
-    //         const matchesTime = selectedTimes.length === 0 || selectedTimes.some(time => {
-    //             if (time === 'rapide') return recipeTime <= 30;
-    //             if (time === 'moyen') return recipeTime > 30 && recipeTime <= 60;
-    //             if (time === 'long') return recipeTime > 60;
-    //             return false;
-    //         });
-    //         const matchesDifficulty = selectedDifficulties.length === 0 || selectedDifficulties.includes(recipeDifficulty);
-
-    //         if (matchesCategory && matchesTime && matchesDifficulty) {
-    //             recipe.style.display = 'block';
-    //         } else {
-    //             recipe.style.display = 'none';
-    //         }
-    //     });
-    // }
-
     const filters = document.querySelectorAll('#filtre input[type="checkbox"]');
     const recipes = document.querySelectorAll('.recette');
 
