@@ -27,8 +27,8 @@ body {
 body.dark-theme {
     background-color: black;
     color: white;
-   
-    
+
+
 }
 
 a {
@@ -41,8 +41,10 @@ body.dark-theme a {
     color: white !important;
 }
 
-.btn {padding-right: 30px;
-position: sticky;}
+.btn {
+    padding-right: 30px;
+    position: sticky;
+}
 
 .theme {
     width: 25px;
@@ -58,7 +60,7 @@ position: sticky;}
 
 /* Mode nuit */
 
- 
+
 
 
 header {
@@ -118,6 +120,7 @@ nav {
 
     display: none;
     z-index: 100;
+
     ul {
         position: absolute;
         top: 0;
@@ -126,9 +129,10 @@ nav {
         right: 20%;
         background-color: rgba(0, 0, 0, 0.678);
 
-        
+
         li {
             margin: 2rem;
+
             a {
                 color: white;
                 text-decoration: none;
@@ -136,24 +140,27 @@ nav {
                 font-weight: bold;
             }
         }
-    
-}
+
+    }
 
 
 }
+
 .open #close {
     position: sticky;
     border: none;
     color: #e67f22;
     text-align: center;
     font-weight: bold;
-    background-color: #fff; /* Optionnel : couleur de fond pour la visibilité */
+    background-color: #fff;
+    /* Optionnel : couleur de fond pour la visibilité */
     border-radius: 50%;
     padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 101;  
-    transform: translateX(-40px); /* Décale le bouton de 40px vers la gauche */
+    z-index: 101;
+    transform: translateX(-40px);
+    /* Décale le bouton de 40px vers la gauche */
 }
 
 #burger {
@@ -162,7 +169,7 @@ nav {
 
 /* fin interactivité burger */
 
- 
+
 
 /* fin header */
 
@@ -186,7 +193,7 @@ figcaption div {
     display: flex;
     gap: 20px;
     color: white;
- 
+
 }
 
 figcaption .type {
@@ -226,10 +233,11 @@ figcaption button a {
 
 
 .remove-favori {
-    
+
     padding: 15px;
     margin: 15px;
-    background-color: #f44336; /* Rouge */
+    background-color: #f44336;
+    /* Rouge */
     color: white;
     border: none;
     text-align: center;
@@ -238,7 +246,8 @@ figcaption button a {
 }
 
 .remove-favori:hover {
-    background-color: #d32f2f; /* Un rouge plus foncé au survol */
+    background-color: #d32f2f;
+    /* Un rouge plus foncé au survol */
 }
 
 
@@ -252,14 +261,14 @@ footer {
         display: inline;
         padding: 10px;
 
-       li{
-        list-style: none;
-       } 
+        li {
+            list-style: none;
+        }
 
         a {
             text-decoration: none;
             color: black;
-           
+
         }
 
     }
@@ -273,7 +282,7 @@ footer {
         margin: 10px;
         text-align: center;
         color: var(--text-color);
-        
+
     }
 }
 
@@ -286,16 +295,17 @@ footer {
     }
 
 
-    .btn {padding-right: 60px;
+    .btn {
+        padding-right: 60px;
     }
-  
+
     .open #close {
-       
-      transform: translateX(-70px);
-      /* Décale le bouton de 40px vers la gauche */
-      
-  }
-    
+
+        transform: translateX(-70px);
+        /* Décale le bouton de 40px vers la gauche */
+
+    }
+
 
 
     footer {
@@ -313,11 +323,13 @@ footer {
         justify-content: space-between;
         padding-inline: 20px;
     }
+
     .open {
         display: block;
         padding-right: 50px;
 
-        ul { position: static;
+        ul {
+            position: static;
 
             display: flex;
             justify-content: space-between;
@@ -329,18 +341,23 @@ footer {
         }
     }
 
-    
-        .open ul a {
-            color: black !important;
-            text-decoration: none;               
-                font-weight: bold;
-        }
+
+    .open ul a {
+        color: black !important;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    ul a#favoris {
+        color: var(--primary-color) !important;
+    }
+
     #burger {
         display: none;
     }
-    
-    
-    #close{
+
+
+    #close {
         display: none;
     }
 
@@ -348,15 +365,15 @@ footer {
 
 
     footer {
-   
- 
+
+
         .final {
             display: grid;
             grid-template-columns: 1fr 1fr;
-           
-         }
-         
-    
-    }    
+
+        }
+
 
     }
+
+}

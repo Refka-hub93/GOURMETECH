@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/theme.js" defer></script>
-    <script src="js/burger.js" defer  ></script>
+    <script src="js/burger.js" defer></script>
+    <script src="js/recette.js" defer></script>
 
     <link rel="stylesheet" href="css/recette.css">
     <title>Page de recette</title>
@@ -21,7 +22,7 @@
             <div class="open">
                 <ul>
                     <li> <a href="index.html">Accueil</a> </li>
-                    <li> <a href="recette.html">Recette</a> </li>
+                    <li> <a href="recette.html" id="recette">Recette</a> </li>
                     <li><a href="favoris.html">Favoris</a> </li>
                     <li><a href="a-propos.html">À propos</a> </li>
                 </ul>
@@ -44,20 +45,28 @@
         </nav>
     </header>
     <main>
-     
-<section class="recepie">
-        <img src="assets/images/Tarte aux pommes (1).jpg" alt="Tarte aux pommes"  width="100%" aria-label="1">
-        <h1>Tarte aux pommes</h1>
-        <div class="details">
-        <p class="type">Dessert</p>
-        <p class="duree">60 min</p>
-        <p class="difficulte">Facile</p>
-        <p class="personnes">6 personnes</p>
-    </div>
-           
-   
 
-    </section>
+        <section class="recepie recette" data-id="1">
+            <img src="assets/images/Tarte aux pommes (1).jpg" alt="Tarte aux pommes" width="100%" aria-label="1">
+            <svg class="favori-actif" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-heart" viewBox="0 0 16 16">
+                <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+            </svg>
+
+
+            <h1>Tarte aux pommes</h1>
+            <div class="details">
+                <p class="type">Dessert</p>
+                <p class="duree">60 min</p>
+                <p class="difficulte">Facile</p>
+                <p class="personnes">6 personnes</p>
+            </div>
+
+
+
+
+        </section>
         <section class="ingredients">
             <h2>Liste des ingrédients :</h2>
             <ul>
@@ -71,86 +80,94 @@
 
         <section class="steps">
             <h2>Les étapes de préparation :</h2>
-        <ol>
-            <li>Éplucher et découper en morceaux 4 Golden.</li>
-            <li>Faire une compote : les mettre dans une casserole avec un peu d'eau (1 verre ou 2). Bien remuer. Quand
-                les pommes commencent à ramollir, ajouter un sachet ou un sachet et demi de sucre vanillé. Ajouter un
-                peu d'eau si nécessaire.</li>
-            <li>Vous saurez si la compote est prête une fois que les pommes ne seront plus dures du tout. Ce n'est pas
-                grave s'il reste quelques morceaux.</li>
-            <li>Pendant que la compote cuit, éplucher et couper en quatre les deux dernières pommes, puis, couper les
-                quartiers en fines lamelles (elles serviront à être posées sur la compote).</li>
-            <li>Préchauffer le four à 210°C (thermostat 7).</li>
-            <li>Laisser un peu refroidir la compote et étaler la pâte brisée dans un moule et la piquer avec une
-                fourchette.</li>
-            <li>Verser la compote sur la pâte et placer les lamelles de pommes en formant une spirale ou plusieurs
-                cercles, au choix ! Disposer des lamelles de beurre dessus.</li>
-            <li>Mettre au four et laisser cuire pendant 30 min max. Surveiller la cuisson. Vous pouvez ajouter un peu de
-                sucre vanillé sur la tarte pendant que çà cuit pour caraméliser un peu.</li>
-        </ol>
-    </section>
+            <ol>
+                <li>Éplucher et découper en morceaux 4 Golden.</li>
+                <li>Faire une compote : les mettre dans une casserole avec un peu d'eau (1 verre ou 2). Bien remuer.
+                    Quand
+                    les pommes commencent à ramollir, ajouter un sachet ou un sachet et demi de sucre vanillé. Ajouter
+                    un
+                    peu d'eau si nécessaire.</li>
+                <li>Vous saurez si la compote est prête une fois que les pommes ne seront plus dures du tout. Ce n'est
+                    pas
+                    grave s'il reste quelques morceaux.</li>
+                <li>Pendant que la compote cuit, éplucher et couper en quatre les deux dernières pommes, puis, couper
+                    les
+                    quartiers en fines lamelles (elles serviront à être posées sur la compote).</li>
+                <li>Préchauffer le four à 210°C (thermostat 7).</li>
+                <li>Laisser un peu refroidir la compote et étaler la pâte brisée dans un moule et la piquer avec une
+                    fourchette.</li>
+                <li>Verser la compote sur la pâte et placer les lamelles de pommes en formant une spirale ou plusieurs
+                    cercles, au choix ! Disposer des lamelles de beurre dessus.</li>
+                <li>Mettre au four et laisser cuire pendant 30 min max. Surveiller la cuisson. Vous pouvez ajouter un
+                    peu de
+                    sucre vanillé sur la tarte pendant que çà cuit pour caraméliser un peu.</li>
+            </ol>
+        </section>
 
         <section class="hero">
             <h2>Suggestions de recettes similaires</h2>
-        <div id="container">
-            <figure>
-                <img src="assets/images/tasty-apple-pie-dish-copy-space.jpg" alt="Apple Pie" width="100%">
-                <figcaption>
-                    <h3>Apple Pie</h3>
-                    <p>Une version anglo-saxonne de la tarte aux pommes, avec des pommes caramélisées et une pâte tressée élégante.</p>
-                </figcaption>
-            </figure>
-        
-            <figure>
-                <img src="assets/images/Pancake géant.jpg" alt="Pancake géant aux pommes" width="100%">
-                <figcaption>
-                    <h3>Pancake géant aux pommes</h3>
-                    <p>Une alternative moelleuse et parfumée, idéale pour le petit-déjeuner ou le goûter.</p>
-                </figcaption>
-            </figure>
-        
-            <figure>
-                <img src="assets/images/Crumbels.jpg" alt="Tarte crumble aux pommes" width="100%">
-                <figcaption>
-                    <h3>Tarte crumble aux pommes</h3>
-                    <p>Une combinaison parfaite de pommes fondantes et d'un crumble croustillant pour un dessert irrésistible.</p>
-                </figcaption>
-            </figure>
-        
-            <figure>
-                <img src="assets/images/flat-lay-pie-apples.jpg" alt="Tarte aux pommes et amandes" width="100%">
-                <figcaption>
-                    <h3>Tarte aux pommes et amandes</h3>
-                    <p>Un mariage délicieux entre la douceur des pommes et la richesse des amandes pour une garniture généreuse.</p>
-                </figcaption>
-            </figure>
-        </div>
-        
-    </section>
+            <div id="container">
+                <figure>
+                    <img src="assets/images/tasty-apple-pie-dish-copy-space.jpg" alt="Apple Pie" width="100%">
+                    <figcaption>
+                        <h3>Apple Pie</h3>
+                        <p>Une version anglo-saxonne de la tarte aux pommes, avec des pommes caramélisées et une pâte
+                            tressée élégante.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/images/Pancake géant.jpg" alt="Pancake géant aux pommes" width="100%">
+                    <figcaption>
+                        <h3>Pancake géant aux pommes</h3>
+                        <p>Une alternative moelleuse et parfumée, idéale pour le petit-déjeuner ou le goûter.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/images/Crumbels.jpg" alt="Tarte crumble aux pommes" width="100%">
+                    <figcaption>
+                        <h3>Tarte crumble aux pommes</h3>
+                        <p>Une combinaison parfaite de pommes fondantes et d'un crumble croustillant pour un dessert
+                            irrésistible.</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/images/flat-lay-pie-apples.jpg" alt="Tarte aux pommes et amandes" width="100%">
+                    <figcaption>
+                        <h3>Tarte aux pommes et amandes</h3>
+                        <p>Un mariage délicieux entre la douceur des pommes et la richesse des amandes pour une
+                            garniture généreuse.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </section>
     </main>
 
 
 
     <footer>
         <div class="final">
-         <nav>
-             <h3>Navigation</h3>
-             <ul>
-                 <li> <a href="index.html">Accueil</a> </li>
-                 <li> <a href="recette.html">Recette</a> </li>
-                 <li><a href="favoris.html">Mes favoris</a> </li>
-                 <li><a href="a-propos.html">À propos</a> </li>
-             </ul>
-         </nav>
- 
-         <div>
-             <h3>A propos de GroumeTech</h3>
-             <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
-                 pédagogique</p>
-         </div>
-     </div>
-         <p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
-     </footer>
+            <nav>
+                <h3>Navigation</h3>
+                <ul>
+                    <li> <a href="index.html">Accueil</a> </li>
+                    <li> <a href="recette.html">Recette</a> </li>
+                    <li><a href="favoris.html">Mes favoris</a> </li>
+                    <li><a href="a-propos.html">À propos</a> </li>
+                </ul>
+            </nav>
+
+            <div>
+                <h3>A propos de GroumeTech</h3>
+                <p>GroumeTech est une plateform de recette culinaires interactives développée dans le cadre d'un projet
+                    pédagogique</p>
+            </div>
+        </div>
+        <p id="copy"> © 2025 Groumtech - Tous droit résevés</p>
+    </footer>
 </body>
 
 </html>

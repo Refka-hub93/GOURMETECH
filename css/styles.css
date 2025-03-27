@@ -442,6 +442,10 @@ footer {
         font-weight: bold;
     }
 
+    ul a#accueil {
+        color: var(--primary-color) !important;
+    }
+
     #burger {
         display: none;
     }
@@ -469,14 +473,14 @@ footer {
 
     #filtre {
         display: flex;
-   
+
 
     }
 
     #categorie,
     #difficulte,
     #temps {
-        
+
         padding: 30px;
         padding-right: 50px;
     }

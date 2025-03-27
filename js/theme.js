@@ -25,7 +25,7 @@ function toggleTheme() {
         body.classList.add("dark-theme");
         const themeIcon = document.createElement("img");
         themeIcon.classList.add("theme-icon"); // Ajouter une classe CSS
-       
+
     }
     console.log(themeIcon.src)
 }

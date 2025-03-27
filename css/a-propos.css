@@ -27,12 +27,14 @@ body {
 body.dark-theme {
     background-color: black;
     color: white;
-   
-    
+
+
 }
 
-.btn {padding-right: 30px;
-position: sticky;}
+.btn {
+    padding-right: 30px;
+    position: sticky;
+}
 
 .theme {
     width: 25px;
@@ -100,11 +102,13 @@ nav {
     display: flex;
     align-items: center;
 }
+
 /* Interactivité burger */
 .open {
 
     display: none;
     z-index: 100;
+
     ul {
         position: absolute;
         top: 0;
@@ -113,9 +117,10 @@ nav {
         right: 20%;
         background-color: rgba(0, 0, 0, 0.678);
 
-        
+
         li {
             margin: 2rem;
+
             a {
                 color: white;
                 text-decoration: none;
@@ -123,24 +128,27 @@ nav {
                 font-weight: bold;
             }
         }
-    
-}
+
+    }
 
 
 }
+
 .open #close {
     position: sticky;
     border: none;
     color: #e67f22;
     text-align: center;
     font-weight: bold;
-    background-color: #fff; /* Optionnel : couleur de fond pour la visibilité */
+    background-color: #fff;
+    /* Optionnel : couleur de fond pour la visibilité */
     border-radius: 50%;
     padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 101;  
-    transform: translateX(-40px); /* Décale le bouton de 40px vers la gauche */
+    z-index: 101;
+    transform: translateX(-40px);
+    /* Décale le bouton de 40px vers la gauche */
 }
 
 #burger {
@@ -164,77 +172,94 @@ nav {
 /* fin header */
 
 .presentation {
-   
-padding: 10px;
+
+    padding: 10px;
 
     h2 {
         font-weight: bold;
         font-size: 1.2rem;
         padding-bottom: 5px;
-    
+
     }
+
     ul {
-    
+
         padding-left: 20px;
-    
+
         /* Ajout d'une marge pour afficher les puces */
         li {
             margin: 20px;
         }
-}}
+    }
+}
 
-section{
+section {
     padding: 10px;
+
     h2 {
-   
+
         font-size: 1.2rem;
     }
-    form {  
-     
-        padding : 10px;
+
+    form {
+
+        padding: 10px;
         display: inline-block;
-        }
-    
-        div {margin-bottom: 10px ;}
-    
-        
-   /* Sélectionne tous les inputs sauf ceux de type checkbox */
-input:not([type="checkbox"]), 
-textarea { 
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-    border-radius: 2px;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+
+
+    /* Sélectionne tous les inputs sauf ceux de type checkbox */
+    input:not([type="checkbox"]),
+    textarea {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 2px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+    }
+
+
+
+    #checkbox {
+        display: inline-block;
+        /* Aligne les éléments sur une seule ligne */
+        align-items: center;
+        /* Centre les éléments verticalement */
+        gap: 10px;
+        /* Ajoute un espace entre les éléments */
+    }
+
+    button {
+        text-align: center;
+        background-color: var(--primary-color);
+        padding-inline: 20px;
+        padding-block: 10px;
+        margin: 10px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
 }
 
-
- 
-#checkbox {
-    display: inline-block; /* Aligne les éléments sur une seule ligne */
-    align-items: center; /* Centre les éléments verticalement */
-    gap: 10px; /* Ajoute un espace entre les éléments */
-} 
-
-   button {
-    text-align: center;
-    background-color: var(--primary-color);
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin: 10px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-   } 
-}
-    
 summary {
     font-size: 1rem;
+    padding: 10px;
+
 }
 
 details {
-    padding: 5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+
+    p {
+        color: rgba(214, 114, 0, 0.979);
+        padding-left: 15px;
+    }
 }
 
 /*  
@@ -284,23 +309,29 @@ footer {
 
     form {
         display: block;
-        margin: 0 auto; /* Centrer horizontalement */
-        width: 80%; /* Ajuste la largeur du formulaire si nécessaire */
-        
+        margin: 0 auto;
+        /* Centrer horizontalement */
+        width: 80%;
+        /* Ajuste la largeur du formulaire si nécessaire */
+
     }
-    .btn {padding-right: 60px;
+
+    .btn {
+        padding-right: 60px;
     }
 
     .open #close {
-       
-      transform: translateX(-70px);
-      /* Décale le bouton de 40px vers la gauche */
-  }
-    
+
+        transform: translateX(-70px);
+        /* Décale le bouton de 40px vers la gauche */
+    }
+
 
     button {
-        display: block; /* Rend le bouton un élément de bloc */
-        margin: 0 auto; /* Centre horizontalement */
+        display: block;
+        /* Rend le bouton un élément de bloc */
+        margin: 0 auto;
+        /* Centre horizontalement */
     }
 
 
@@ -318,14 +349,15 @@ footer {
     header {
         justify-content: space-between;
         padding-inline: 20px;
-        
+
     }
 
     .open {
         display: block;
         padding-right: 50px;
 
-        ul { position: static;
+        ul {
+            position: static;
 
             display: flex;
             justify-content: space-between;
@@ -337,45 +369,54 @@ footer {
         }
     }
 
-    
-        .open ul a {
-            color: black !important;
-            text-decoration: none;               
-                font-weight: bold;
-        }
-    
-    #burger   {
+
+    .open ul a {
+        color: rgb(0, 0, 0) !important;
+        text-decoration: none ;
+        font-weight: bold;
+       
+    }
+
+    ul a#a-propos {
+        color: var(--primary-color) !important;
+    }
+    #burger {
         display: none;
     }
 
-    #close{
+    #close {
         display: none;
     }
 
     form {
         display: block;
-        margin: 0 auto; /* Centrer horizontalement */
-        width: 50%; /* Ajuste la largeur du formulaire selon tes préférences */
-        max-width: 600px; /* Limite la largeur pour ne pas avoir un formulaire trop large */
+        margin: 0 auto;
+        /* Centrer horizontalement */
+        width: 50%;
+        /* Ajuste la largeur du formulaire selon tes préférences */
+        max-width: 600px;
+        /* Limite la largeur pour ne pas avoir un formulaire trop large */
     }
 
-    
+
     button {
-        display: block; /* Rend le bouton un élément de bloc */
-        margin: 0 auto; /* Centre horizontalement */
+        display: block;
+        /* Rend le bouton un élément de bloc */
+        margin: 0 auto;
+        /* Centre horizontalement */
     }
 
-  
+
     footer {
-   
- 
+
+
         .final {
             display: grid;
             grid-template-columns: 1fr 1fr;
-           
-         }
-         
-    
-    }    
+
+        }
+
+
+    }
 
 }

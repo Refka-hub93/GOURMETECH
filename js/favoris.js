@@ -1,5 +1,5 @@
 
- 
+
 // Récupérer les favoris depuis localStorage
 const favoris = new Set(JSON.parse(localStorage.getItem("favoris")) || []);
 const favorisList = document.getElementById("favoris-list");
@@ -42,14 +42,14 @@ for (let i = 0; i < favorisRecettes.length; i++) {
     favorisList.appendChild(recetteElement);
 
 
- // Ajouter l'événement de suppression au bouton
- const removeButton = recetteElement.querySelector(".remove-favori");
- removeButton.addEventListener("click", () => {
-     // Supprimer l'élément de la Set favoris
-     favoris.delete(recette.id);
-     // Mettre à jour le localStorage
-     localStorage.setItem("favoris", JSON.stringify(Array.from(favoris)));
-     // Mettre à jour l'affichage en retirant l'élément
-     recetteElement.remove();
- });
+    // Ajouter l'événement de suppression au bouton
+    const removeButton = recetteElement.querySelector(".remove-favori");
+    removeButton.addEventListener("click", () => {
+        // Supprimer l'élément de la Set favoris
+        favoris.delete(recette.id);
+        // Mettre à jour le localStorage
+        localStorage.setItem("favoris", JSON.stringify(Array.from(favoris)));
+        // Mettre à jour l'affichage en retirant l'élément
+        recetteElement.remove();
+    });
 }
