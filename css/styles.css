@@ -24,7 +24,7 @@ body.dark-theme {
 }
 
 .btn {
-    padding-right: 30px;
+    padding-right: 20px;
     position: sticky;
 }
 
@@ -232,14 +232,13 @@ figure {
 
 
 svg {
-    position: absolute;
-    top: 10px;
-    /* Ajuste la distance du haut de l'image */
-    right: 10px;
+   
+    left: 20px;
     /* Ajuste la distance du bord droit de l'image */
     cursor: pointer;
     /* Pour signaler que c'est cliquable */
     fill: white;
+   
 }
 
 
@@ -300,7 +299,6 @@ figcaption {
 svg.favori-actif {
     fill: red;
     transition: fill 0.3s ease;
-
 }
 
 
@@ -340,7 +338,6 @@ footer {
 
 
 
-
 /* Media Query spécifique pour tablette */
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -358,7 +355,13 @@ footer {
         /* Décale le bouton de 40px vers la gauche */
     }
 
-
+    
+    #burger {
+        cursor: pointer;
+        
+        
+    }
+    
 
     form {
         padding: 10px;
@@ -394,8 +397,6 @@ footer {
 
 
     footer {
-
-
         .final {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -407,9 +408,6 @@ footer {
 }
 
 @media (min-width: 1025px) {
-
-
-
 
     header {
 
@@ -474,7 +472,10 @@ footer {
     #filtre {
         display: flex;
 
+    }
 
+    label {
+        color: black;
     }
 
     #categorie,
@@ -491,15 +492,10 @@ footer {
 
 
     footer {
-
-
         .final {
             display: grid;
             grid-template-columns: 1fr 1fr;
-
         }
-
-
     }
 
 }

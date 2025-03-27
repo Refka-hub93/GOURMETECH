@@ -62,7 +62,7 @@ header {
     justify-content: center;
     gap: 50px;
     box-shadow: 1px 1px 1px 1px rgb(239, 235, 235);
-
+    position: relative;  /* Important pour le positionnement absolu du burger */
 }
 
 #titre {
@@ -105,9 +105,17 @@ header {
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-
+#burger {
+    cursor: pointer;
+    position: absolute;  /* Permet de positionner le burger à l'intérieur de la barre de navigation */
+    top: 10px;           /* Positionne le burger à 10px du haut */
+    right: 20px;         /* Positionne le burger à 20px du côté droit */
+    z-index: 1000; 
+}
 /* Interactivité burger */
 .open {
 
@@ -156,9 +164,6 @@ nav {
     /* Décale le bouton de 40px vers la gauche */
 }
 
-#burger {
-    cursor: pointer;
-}
 
 /* fin interactivité burger */
 
